@@ -67,7 +67,7 @@ function createGrid (n_Cells, elementContainer){
             this.classList.add('mine');
             console.log(this);
             console.log("hai perso");
-            alert ("hai perso  "  + score)
+            alert ("hai perso ! il tuo punteggio é "  + score)
             ;
             }
             else {
@@ -76,7 +76,7 @@ function createGrid (n_Cells, elementContainer){
                 console.log('Selezionata cella N.' + this.innerHTML);
                 if (n_Cells - score == 16) {
                     score ++
-                    console.log("hai vinto  " + score);;
+                    console.log("hai vinto punteggio massimo " + score);;
                 }
             }
         });
