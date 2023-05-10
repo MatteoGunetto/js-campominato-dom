@@ -56,3 +56,8 @@ footer{
 .hidden{
     display: none;
 }
+
+/* aggiungere colore mina */
+.mine{
+    background-color: red;
+}
