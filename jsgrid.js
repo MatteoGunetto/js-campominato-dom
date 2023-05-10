@@ -58,33 +58,33 @@ function createGrid (n_Cells, elementContainer){
         const elementCell = document.createElement('div');
         elementCell.innerHTML = i;
         elementCell.classList.add('cell');
-        
-
         elementContainer.append(elementCell);
 
-
-
-
-        
-        
         //Aggiunta azione alla cella creata
         elementCell.addEventListener('click', function(){
             if(arrMines.includes(i)) {
                 console.log('bomba.' + this.innerHTML);
             this.classList.add('mine');
             console.log(this);
-
+            console.log("hai perso");
+            alert ("hai perso  "  + score)
+            ;
             }
-            console.log('Selezionata cella N.' + this.innerHTML);
-            this.classList.add('clicked');
-            console.log(this);
-
-
-
-
+            else {
+                this.classList.add('clicked');
+                score++;
+                console.log('Selezionata cella N.' + this.innerHTML);
+                if (n_Cells - score == 16) {
+                    score ++
+                    console.log("hai vinto  " + score);;
+                }
+            }
         });
     }
 }
+
+
+
 // Array Random Num generator
 function getRandomNum(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) ) + min;
