@@ -1,0 +1,58 @@
+/* Regole generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Regole Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 22px;
+    height: 40px;
+}
+/* Regole main */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    background-color: #7FFFD4;
+}
+/* Regole footer */
+footer{
+    display: flex;
+    align-items: center;
+    padding-inline: 22px;
+    height: 40px;
+}
+/* Regole elementi js */
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+.cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10) ;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.clicked{
+    background-color: rgb(0, 128, 128);
+}
+
+.hidden{
+    display: none;
+}
