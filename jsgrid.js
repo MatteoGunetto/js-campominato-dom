@@ -61,12 +61,27 @@ function createGrid (n_Cells, elementContainer){
         
 
         elementContainer.append(elementCell);
+
+
+
+
+        
         
         //Aggiunta azione alla cella creata
         elementCell.addEventListener('click', function(){
+            if(arrMines.includes(i)) {
+                console.log('bomba.' + this.innerHTML);
+            this.classList.add('mine');
             console.log(this);
+
+            }
             console.log('Selezionata cella N.' + this.innerHTML);
             this.classList.add('clicked');
+            console.log(this);
+
+
+
+
         });
     }
 }
@@ -74,9 +89,12 @@ function createGrid (n_Cells, elementContainer){
 function getRandomNum(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-
+var randomNum;
+var arr = [];
 function generateRandomArray(min, max, nElements) {
-	let arr = [];
+
+
+
 	for (let i = 0; i < nElements; i++) {
 
 		let randomNum;
@@ -89,5 +107,7 @@ function generateRandomArray(min, max, nElements) {
 
 	return arr;
 }
+
+
 
 
